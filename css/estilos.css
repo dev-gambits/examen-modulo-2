@@ -1,10 +1,113 @@
-* {
-    background-color: aqua;
-    padding: 0;
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
 
+body{
+    background-color: white;
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+}
+header *{
+    margin: 0;
+}
+#contenido{
+    width: 85%;
+    margin: 0px auto;
+}
+header{
+    font-size: 25px;
+    text-align: center;
+}
+footer{
+    text-align: left;
+    clear: both;
+}
+header, footer{
+    background-color: black;
+    color: #f2ff00;
 }
 
-h1 {
+main{
+    background-color: #f2ff00;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+article{
+    width: 90%;
+    margin: 5px ;
+    border: 5px outset black;
+}
+
+article img{
+    width: 50%;
+    height: 200px;
+    padding-bottom: 20px;
+}
+
+#marcador{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    list-style-type: none;
+    font-size: 15px;
+    padding: 0;
+}
+#marcador li{
+    font-size: 16px;
+    border: 3px solid ;
+    float: left;
+    background-color: black;
+    color: #f2ff00;
+    padding: 5px;
     text-align: center;
-    color: blue;
+}
+
+#pc,#usuario{
+    font-size: 36px;
+    margin: 17px;
+    padding: 10px;
+}
+
+button{
+    width: 90%;
+    font-size: 25px;
+    padding: 20px;
+    display: inline-block;
+    margin: 22px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    cursor: pointer;
+}
+#ganador{
+    font-size: 50px;
+    clear: both;
+}
+
+@media(min-width: 760px){
+    main{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    #marcador{
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    article{
+        flex-basis: 48%;
+        margin: 5px;
+    }
+    button{
+        flex-basis: 18%;
+        padding: 10px;
+    }
 }
